@@ -1,0 +1,8 @@
+version: '3.9'
+
+services:
+  ubuntu:
+    build: .
+    ports:
+      - '2222:22'
+    command: sh -c "service .ssh start && tail -f /dev/null"
